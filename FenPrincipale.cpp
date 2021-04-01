@@ -7,13 +7,17 @@ FenPrincipale::FenPrincipale()
     /****************************menu buttons****************************/
     /********************************************************************/
     //main butonns
-    QMenu *menuFichiers = menuBar()->addMenu("&fichiers");
+    QMenu *menuFichiers = menuBar()->addMenu("&Fichiers");
     QMenu *menuEdition = menuBar()->addMenu("&Edition");
     QMenu *menuAffichage = menuBar()->addMenu("&Affichage");
     QMenu *menuOutils = menuBar()->addMenu("&Outils");
 
 
     //menu action (fichiers)
+    //open files
+    QMenu *ouvrirFichier = menuFichiers->addMenu("&Ouvrir");
+
+
     //recent files
     QMenu *fichiersRecents = menuFichiers->addMenu("Fichiers &récents");
     //fichiersRecents->addAction("Fichier bidon 1.txt");
@@ -62,6 +66,14 @@ FenPrincipale::FenPrincipale()
 
     //quit
     toolBarFichiers->addAction(actionQuitter);
+
+
+    /********************************************************************/
+    /******************************docks*********************************/
+    /********************************************************************/
+
+
+    QDockWidget *dockFichiers = new QDockWidget;
 
 
 
