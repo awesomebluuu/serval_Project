@@ -2,8 +2,7 @@
 
 FenPrincipale::FenPrincipale()
 {
-    setFixedSize(800, 500);
-
+    this->resize(800, 500);
     /********************************************************************/
     /****************************menu buttons****************************/
     /********************************************************************/
@@ -11,14 +10,15 @@ FenPrincipale::FenPrincipale()
     QMenu *menuFichiers = menuBar()->addMenu("&fichiers");
     QMenu *menuEdition = menuBar()->addMenu("&Edition");
     QMenu *menuAffichage = menuBar()->addMenu("&Affichage");
+    QMenu *menuOutils = menuBar()->addMenu("&Outils");
 
 
     //menu action (fichiers)
     //recent files
     QMenu *fichiersRecents = menuFichiers->addMenu("Fichiers &récents");
-    fichiersRecents->addAction("Fichier bidon 1.txt");
-    fichiersRecents->addAction("Fichier bidon 2.txt");
-    fichiersRecents->addAction("Fichier bidon 3.txt");
+    //fichiersRecents->addAction("Fichier bidon 1.txt");
+    //fichiersRecents->addAction("Fichier bidon 2.txt");
+    //fichiersRecents->addAction("Fichier bidon 3.txt");
 
 
     //quit

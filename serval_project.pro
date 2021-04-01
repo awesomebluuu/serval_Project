@@ -5,4 +5,5 @@ SOURCES += \
     main.cpp
 
 HEADERS += \
-    FenPrincipale.h
+    FenPrincipale.h \
+    sqlite3.h
