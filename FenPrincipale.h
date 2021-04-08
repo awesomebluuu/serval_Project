@@ -8,6 +8,9 @@ class FenPrincipale : public QMainWindow
     public:
     FenPrincipale();
 
+	public slots:
+	void openFile();
+
     private:
 
 };

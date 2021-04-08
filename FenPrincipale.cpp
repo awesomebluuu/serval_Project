@@ -1,4 +1,7 @@
 #include "FenPrincipale.h"
+#include "sqlite3.h"
+
+void FenPrincipale::OpenFile();
 
 FenPrincipale::FenPrincipale()
 {
@@ -15,7 +18,10 @@ FenPrincipale::FenPrincipale()
 
     //menu action (fichiers)
     //open files
-    QMenu *ouvrirFichier = menuFichiers->addMenu("&Ouvrir");
+	QAction *ouvrirFichier = new QAction("&Ouvrir", this);
+	menuFichiers->addAction(ouvrirFichier);
+	ouvrirFichier->setShortcut(QKeySequence("ctrl+O"));
+	connect(ouvrirFichier, SIGNAL(triggered()), qApp, SLOT(openFile()));
 
 
     //recent files
@@ -85,3 +91,10 @@ FenPrincipale::FenPrincipale()
     //creation widget
     setCentralWidget(zoneCentrale);
 }
+
+
+void FenPrincipale::OpenFile();{
+	QString fichier = QFileDialog::GetOpenFileName(this, "ouvrir un fichier", QString(), "databases (*.db)");
+
+}
+
